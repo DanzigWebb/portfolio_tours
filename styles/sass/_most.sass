@@ -1,0 +1,92 @@
+::placeholder
+  color: #666
+::selection
+  background-color: $accent
+  color: #fff
+
+// ===============================>
+// main
+// <===============================
+html
+  font-size: 21vw
+  @media (min-width: 481px)
+    font-size: 100px
+    overflow-x: hidden
+body
+  font-size: .16rem
+  margin: auto
+  position: relative
+  line-height: 1.4
+  font-weight: 300
+  font-family: 'Montserrat', sans-serif
+  overflow: hidden
+  color: #252525
+  background-image: url(../../img/main-bg.jpg)
+  background-size: cover
+  background-attachment: fixed
+  min-height: 100vh
+  input, textarea
+    border: #666 .01rem solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-wrap
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    max-width: 100%
+
+// ===============================>
+// container
+// <===============================
+.container 
+  padding-right: .15rem
+  padding-left: .15rem
+  margin-right: auto
+  margin-left: auto
+
+@media (min-width: 576px) 
+  .container 
+    max-width: 540px
+
+@media (min-width: 768px) 
+  .container 
+    max-width: 720px
+
+@media (min-width: 992px) 
+  .container 
+    max-width: 960px
+
+@media (min-width: 1200px) 
+  .container 
+    max-width: 1140px
+
+// ===============================>
+// position
+// <===============================
+.row
+  display: flex
+.aic
+  align-items: center
+.jcc
+  justify-content: center
+.jcsb
+  justify-content: space-between
+.jcsa
+  justify-content: space-around
+
+
+.slide-enter-active
+  transition: all .4s ease-out
+  
+.slide-leave-active 
+  transition: all .3s ease
+
+
+.slide-enter, .slide-leave-to
+  transform: translateX(-100%)
+  opacity: 0

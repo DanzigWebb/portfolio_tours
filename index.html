@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Кисти для макияжа Pretty MakeUp</title>
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&amp;subset=cyrillic"
+		rel="stylesheet">
+
+	<meta name="theme-color" content="#000">
+	<link rel="stylesheet" href="styles/css/main.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+
+	<div class="vue-wrapper">
+		<main class="main">
+			<header class="header row aic">
+				<div class="container">
+					<div class="row aic">
+						<div @click="showMenu" class="header__logo">BOUTY<span>TRAVEL</span></div>
+						<span class="header__sub-title">@turn your dreams into reality</span>
+					</div>
+				</div>
+			</header>
+			<div class="container">
+				<div class="row main__content">
+					<menu class="menu" :class="mobMenu ? 'show' : '' ">
+						<ul class="menu__list">
+							<li class="menu__item" @click="activeSection = 1; showMenu()">About us <span>01</span></li>
+							<li class="menu__item" @click="activeSection = 2; showMenu()">Tours <span>02</span></li>
+							<li class="menu__item" @click="activeSection = 3; showMenu()">Our Blog <span>03</span></li>
+							<li class="menu__item" @click="activeSection = 4; showMenu()">Contacts <span>04</span></li>
+						</ul>
+					</menu>
+					<!-- tours  -->
+					<transition mode="out-in" name="slide">
+						<section v-if="activeSection == 1" key="1" class="content__item tours">
+							<h1>About us</h1>
+						</section>
+						<section v-if="activeSection == 2" key="2" class="content__item tours">
+							<h1>Tours</h1>
+						</section>
+						<section v-if="activeSection == 3" key="3" class="content__item tours">
+							<h1>Our Blog</h1>
+						</section>
+						<section v-if="activeSection == 4" key="4" class="content__item tours">
+							<h1>Contacts</h1>
+						</section>
+					</transition>
+				</div>
+			</div>
+		</main>
+	</div>
+
+
+
+	<script src="js/common.js"></script>
+
+	<script>
+		let app = new Vue({
+			el: '.vue-wrapper',
+			data: {
+				activeSection: 1,
+				mobMenu: false,
+			},
+			methods: {
+				showMenu() {
+					this.mobMenu = !this.mobMenu;
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
