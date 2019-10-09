@@ -35,10 +35,10 @@
 				<div class="row main__content">
 					<menu class="menu" :class="mobMenu ? 'show' : '' ">
 						<ul class="menu__list">
-							<li class="menu__item" @click="activeSection = 1; showMenu()">About us <span>01</span></li>
-							<li class="menu__item" @click="activeSection = 2; showMenu()">Tours <span>02</span></li>
-							<li class="menu__item" @click="activeSection = 3; showMenu()">Our Blog <span>03</span></li>
-							<li class="menu__item" @click="activeSection = 4; showMenu()">Contacts <span>04</span></li>
+							<li class="menu__item">About us <span>01</span></li>
+							<li class="menu__item">Tours <span>02</span></li>
+							<li class="menu__item">Our Blog <span>03</span></li>
+							<li class="menu__item">Contacts <span>04</span></li>
 						</ul>
 					</menu>
 					<!-- tours  -->
@@ -75,7 +75,18 @@
 			methods: {
 				showMenu() {
 					this.mobMenu = !this.mobMenu;
+				},
+				navigation() {
+					document.querySelectorAll('.menu__item').forEach((item, i) => {
+						item.addEventListener('click', () => {
+							this.activeSection = i + 1;
+							this.showMenu()
+						})
+					})
 				}
+			},
+			mounted() {
+				this.navigation()
 			}
 		})
 	</script>
