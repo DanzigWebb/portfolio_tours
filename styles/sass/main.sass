@@ -53,7 +53,7 @@
     width: 100%
     left: 0
     transform: translateX(-100%)
-    overflow: auto: 
+    overflow: auto
   &.show
     transform: translateX(0)
 .menu__list
@@ -77,6 +77,8 @@
   transition: $anim
   @media (max-width: 1170px)
     font-size: 0.22rem
+  @media (max-width: 768px)
+    align-items: center
   span
     position: absolute
     bottom: 0.15rem
