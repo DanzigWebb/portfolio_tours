@@ -19,7 +19,7 @@ body
   line-height: 1.4
   font-weight: 300
   font-family: 'Montserrat', sans-serif
-  overflow: hidden
+  overflow-x: hidden
   color: #252525
   background-image: url(../../img/main-bg.jpg)
   background-size: cover
@@ -38,7 +38,19 @@ body
   align-items: center
   justify-content: center
   img
-    max-width: 100%
+    width: 100%
+
+// ===============================>
+// title
+// <===============================
+.title
+  h2
+    line-height: 1.1
+    font-size: 0.35rem
+
+// ===============================>
+// title end
+// <===============================
 
 // ===============================>
 // container
@@ -66,6 +78,10 @@ body
     max-width: 1140px
 
 // ===============================>
+// container end
+// <===============================
+
+// ===============================>
 // position
 // <===============================
 .row
@@ -78,6 +94,30 @@ body
   justify-content: space-between
 .jcsa
   justify-content: space-around
+// ===============================>
+// position end
+// <===============================
+
+// ===============================>
+// btn
+// <===============================
+.btn
+  padding: 0 .2rem
+  height: 0.4rem
+  background: $dark
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  font-size: 0.18rem
+  font-weight: bold
+  text-decoration: none
+  transition: $anim
+  &:hover
+    background: $accent
+// ===============================>
+// btn end
+// <===============================
 
 
 .slide-enter-active

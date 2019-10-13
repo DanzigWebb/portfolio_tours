@@ -41,11 +41,26 @@
 							<li class="menu__item">Contacts <span>04</span></li>
 						</ul>
 					</menu>
-					<!-- tours  -->
+					
 					<transition mode="out-in" name="slide">
-						<section v-if="activeSection == 1" key="1" class="content__item tours">
-							<h1>About us</h1>
+						<section v-if="activeSection == 1" key="1" class="content__item about">
+							<div class="row">
+								<div class="sect-about">
+									<div class="img-wrap">
+										<img src="img/about-1.jpg" alt="">
+									</div>
+									<div class="title">
+										<h2>Let our experience <br> guide you!</h2>
+									</div>
+									<p><a href="#/">Asequisciunt, neque poroqui quam eseras qui dolorem ipsum, quia dolor.</a></p>
+									<p>Sitamet, consectetur, adipisci vlitdiquia non numquam eius modpoa inciduntsaeut labore etalore
+										magnam aluam quaeras
+										voluptat emniad minima.</p>
+									<a href="#/" class="btn">more</a>
+								</div>
+							</div>
 						</section>
+						<!-- tours  -->
 						<section v-if="activeSection == 2" key="2" class="content__item tours">
 							<h1>Tours</h1>
 						</section>

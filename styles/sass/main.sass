@@ -25,6 +25,9 @@
   overflow: hidden
 .content__item
   flex-basis: 100%
+  padding: .7rem .3rem 
+  padding-left: 0.7rem
+  background: #fff
 .vue-wrapper
   transition: $anim
   position: relative
@@ -43,12 +46,14 @@
   @media (max-width: 1170px)
     width: 2rem
   @media (max-width: 768px)
-    position: absolute
+    position: fixed
     top: 0
     height: 100vh
+    min-height: auto
     width: 100%
     left: 0
     transform: translateX(-100%)
+    overflow: auto: 
   &.show
     transform: translateX(0)
 .menu__list
@@ -102,12 +107,27 @@
 // ===============================>
 // sections
 // <===============================
-
+.sect-about
+  
+  
+  padding-right: 0.4rem
+  @media (min-width: 992px)
+    flex-basis: 50%
+    border-right: 1px solid #dedede
+  p>a
+    text-decoration: none
+    color: #000
+    font-weight: 500
+    transition: $anim
+    &:hover
+      color: $accent
 .tours
   padding: 0.2rem
   background: #fff
 // ===============================>
 // custom code end
 // <===============================
+
+
 
 @import "media"
